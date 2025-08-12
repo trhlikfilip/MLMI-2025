@@ -11,6 +11,8 @@ from bias_utils.utils import model_evaluation, mask_tokens, input_pipeline, form
 # handles LTG-specific safety patches (safe GELU, SafeMaskedSoftmax, bucket and position clamps), ensures compatibility with non-BERT MLM architectures via ensure_bert_like,
 # and includes a shrink_and_save step to restore BabyLM’s original vocabulary size before saving
 
+BABYLM_ORIG = 16384
+
 def _safe_gelu(x: torch.Tensor):
     return _orig_gelu_new(torch.clamp(x, -10_000.0, 10_000.0))
 
@@ -111,8 +113,6 @@ def fine_tune(model, dl, epochs, tok, device, lr, eps):
             model.zero_grad()
         print("Avg loss", tot / len(dl), "time", format_time(time.time() - t0))
     return model
-
-BABYLM_ORIG = 16384
 
 def shrink_and_save(model, tok, save_dir):
     os.makedirs(save_dir, exist_ok=True)
