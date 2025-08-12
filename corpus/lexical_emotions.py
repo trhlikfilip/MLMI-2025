@@ -26,18 +26,7 @@ class EmotionCalculator:
     def __init__(self, tokens: List[str]):
         self.tokens = list(tokens)
         self._cumulative: Dict[str, float] = defaultdict(float)
-        self._all: Dict[str, float] = {
-            "fear": 0.0,
-            "anger": 0.0,
-            "anticip": 0.0,
-            "trust": 0.0,
-            "surprise": 0.0,
-            "positive": 0.0,
-            "negative": 0.0,
-            "sadness": 0.0,
-            "disgust": 0.0,
-            "joy": 0.0,
-        }
+        self._all: Dict[str, float] = {k: 0.0 for k in EMOTION_ORDER}
 
     def calculate(self) -> List[float]:
         if not self.tokens:
@@ -48,7 +37,8 @@ class EmotionCalculator:
                 self._cumulative[emotion] += score
         total = len(self.tokens)
         for emo, cumul in self._cumulative.items():
-            self._all[emo] = cumul / total
+            if emo in self._all:
+                self._all[emo] = cumul / total
         return [self._all.get(e, 0.0) for e in EMOTION_ORDER]
 
 def analyse_text(text: str) -> List[float]:
@@ -82,7 +72,7 @@ def process_corpus(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("emotions.txt")
+    parser.add_argument("txt_path")
     parser.add_argument("output_csv")
     parser.add_argument("--no-summary", action="store_true")
     args = parser.parse_args()
