@@ -8,7 +8,7 @@ from transformers.activations import gelu_new as _orig_gelu_new
 from bias_utils.utils import model_evaluation, mask_tokens, input_pipeline, format_time, statistics
 
 #ADJUSTED FOR LTG-BERT: 
-# LTG-specific safety patches (safe GELU, SafeMaskedSoftmax, bucket and position clamps), ensures compatibility with non-BERT MLM architectures via ensure_bert_like,
+# handles LTG-specific safety patches (safe GELU, SafeMaskedSoftmax, bucket and position clamps), ensures compatibility with non-BERT MLM architectures via ensure_bert_like,
 # and includes a shrink_and_save step to restore BabyLM’s original vocabulary size before saving
 
 def _safe_gelu(x: torch.Tensor):
