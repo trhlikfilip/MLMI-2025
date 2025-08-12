@@ -1,0 +1,96 @@
+#!/bin/bash
+#
+# Wilkes-3 (A100, CUDA 11.4) SLURM job – BERT MLM pre-training
+# Fixed: 27 Jun 2025
+#
+
+# SBATCH DIRECTIVES 
+#SBATCH -J gpujob
+#SBATCH -A BUTTERY-SL2-GPU
+#SBATCH --nodes=1
+#SBATCH --ntasks=1                 # one MPI rank; torchrun will fork N GPUs
+#SBATCH --gres=gpu:2               # 2 × A100 on the node
+#SBATCH --time=30:00:00
+#SBATCH --mail-type=NONE
+#SBATCH -p ampere
+# Stream SLURM output into logs/ automatically
+#SBATCH --output=logs/%x.%j.out
+
+# MODULES
+. /etc/profile.d/modules.sh
+module purge
+module load rhel8/default-amp      # GCC 9.4, CUDA 11.4 toolkit
+
+# CONDA ENV
+source /rds/project/rds-xyBFuSj0hm0/MLMI2.M2024/miniconda3/bin/activate
+conda env remove -y -n ltg-bert-env 2>/dev/null || true   # kill leftovers
+conda create -y -n ltg-bert-env python=3.10 pip
+conda activate ltg-bert-env
+export PYTHONNOUSERSITE=1
+
+# PYPI STACK
+python - <<'PY'
+import subprocess, sys, importlib
+def need(pkg, starts=None):
+    try:
+        v = importlib.import_module(pkg).__version__
+        return starts and not v.startswith(starts)
+    except ImportError:
+        return True
+todo = need("torch","2.6") or need("transformers")
+if todo:
+    subprocess.check_call([
+        sys.executable,"-m","pip","install","--no-cache-dir","--upgrade",
+        "torch==2.6.0+cu118","torchvision==0.21.0+cu118","torchaudio==2.6.0+cu118",
+        "--extra-index-url","https://download.pytorch.org/whl/cu118",
+        "git+https://github.com/huggingface/transformers@main",
+        "accelerate>=0.29","datasets>=2.14","evaluate>=0.4.2","scikit-learn>=1.4","safetensors>=0.4.3",
+    ])
+PY
+
+# SANITY CHECK
+python - <<'PY'
+import torch, transformers, accelerate, sys, textwrap
+print("="*46,"\nACTIVE STACK")
+print("Python       :", sys.version.split()[0])
+print("Torch        :", torch.__version__, "(CUDA", torch.version.cuda + ")")
+print("Transformers :", transformers.__version__)
+print("Accelerate   :", accelerate.__version__)
+print("="*46, flush=True)
+PY
+
+# ENV VARS
+export WORLD_SIZE=2                # = GPUs per node
+export MASTER_ADDR=$(hostname)
+export MASTER_PORT=29500
+export NCCL_DEBUG=warn
+export PYTHONUNBUFFERED=1
+export WANDB_DISABLED=true
+
+# TRAINING
+application="torchrun \
+  --standalone --nproc_per_node=2 --master_port=$MASTER_PORT \
+  run_mlm.py \
+    --config_name       babylm/ltgbert-100m-2024 \
+    --tokenizer_name    babylm/ltgbert-100m-2024 \
+    --trust_remote_code true \
+    --train_file        babylm_corpus.txt\
+    --max_seq_length    128 \
+    --per_device_train_batch_size 128 \
+    --num_train_epochs  20 \
+    --learning_rate     5e-4 \
+    --adam_beta1 0.9 --adam_beta2 0.999 --adam_epsilon 1e-8 \
+    --max_grad_norm     1 \
+    --warmup_steps      0 \
+    --output_dir        ./ltg-bert-pretrain2 \
+    --save_steps        10000 \
+    --no_save_safetensors \
+    --do_train --do_eval $options"
+
+# LOGS
+mkdir -p logs
+echo -e "JobID: $SLURM_JOB_ID\nTime : $(date)\nMaster: $(hostname)"
+echo -e "Command:\n$application\n"
+
+# RUN
+stdbuf -oL -eL srun --unbuffered -l --kill-on-bad-exit $application |& tee "logs/out.$SLURM_JOB_ID"

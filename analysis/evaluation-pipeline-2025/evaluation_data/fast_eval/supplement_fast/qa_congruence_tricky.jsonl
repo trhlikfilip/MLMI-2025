@@ -1,0 +1,50 @@
+{"row": 21, "fragment": "fragment", "contrast": "manner vs. NP (tricky)", "sentence_good": "A: How do you teach?\nB: Carefully.", "sentence_bad": "A: How do you teach?\nB: Science."}
+{"row": 0, "fragment": "sentence", "contrast": "animate vs. inanimate (tricky)", "sentence_good": "A: Who cleaned?\nB: Sarah cleaned.", "sentence_bad": "A: Who cleaned?\nB: The tiles cleaned."}
+{"row": 3, "fragment": "sentence", "contrast": "inanimate vs. animate (tricky)", "sentence_good": "Who studies?\nA doctor studies.", "sentence_bad": "Who studies?\nHistory studies."}
+{"row": 17, "fragment": "sentence", "contrast": "num vs. NP (tricky)", "sentence_good": "David: How many do you study?\nSarah: A few studies.", "sentence_bad": "David: How many do you study?\nSarah: History studies."}
+{"row": 1, "fragment": "sentence", "contrast": "animate vs. inanimate (tricky)", "sentence_good": "A: Who read?\nB: A teacher read.", "sentence_bad": "A: Who read?\nB: An essay read."}
+{"row": 3, "fragment": "sentence", "contrast": "inanimate vs. animate (tricky)", "sentence_good": "David: Who studies?\nSarah: Sarah studies.", "sentence_bad": "David: Who studies?\nSarah: History studies."}
+{"row": 2, "fragment": "sentence", "contrast": "animate vs. inanimate (tricky)", "sentence_good": "A: Who cooked?\nB: David cooked.", "sentence_bad": "A: Who cooked?\nB: Pasta cooked."}
+{"row": 6, "fragment": "sentence", "contrast": "loc vs. NP (tricky)", "sentence_good": "Where do you study?\nAt the kindergarten studies.", "sentence_bad": "Where do you study?\nScience studies."}
+{"row": 10, "fragment": "fragment", "contrast": "temp vs. NP (tricky)", "sentence_good": "When do you teach?\nIn the afternoon.", "sentence_bad": "When do you teach?\nMath."}
+{"row": 9, "fragment": "fragment", "contrast": "temp vs. NP (tricky)", "sentence_good": "A: When did you cook?\nB: An hour ago.", "sentence_bad": "A: When did you cook?\nB: Dinner."}
+{"row": 9, "fragment": "fragment", "contrast": "temp vs. NP (tricky)", "sentence_good": "When did you eat?\nSeveral minutes ago.", "sentence_bad": "When did you eat?\nLunch."}
+{"row": 3, "fragment": "sentence", "contrast": "inanimate vs. animate (tricky)", "sentence_good": "David: Who studies?\nSarah: David studies.", "sentence_bad": "David: Who studies?\nSarah: Math studies."}
+{"row": 14, "fragment": "sentence", "contrast": "expl vs. NP (tricky)", "sentence_good": "A: Why do you teach?\nB: For fun teaches.", "sentence_bad": "A: Why do you teach?\nB: Math teaches."}
+{"row": 10, "fragment": "sentence", "contrast": "temp vs. NP (tricky)", "sentence_good": "David: When do you study?\nSarah: Every tuesday studies.", "sentence_bad": "David: When do you study?\nSarah: Science studies."}
+{"row": 18, "fragment": "fragment", "contrast": "num vs. NP (tricky)", "sentence_good": "A: How many did you clean?\nB: Ten.", "sentence_bad": "A: How many did you clean?\nB: The rug."}
+{"row": 21, "fragment": "sentence", "contrast": "manner vs. NP (tricky)", "sentence_good": "How do you teach?\nSlowly teaches.", "sentence_bad": "How do you teach?\nScience teaches."}
+{"row": 2, "fragment": "fragment", "contrast": "animate vs. inanimate (tricky)", "sentence_good": "David: Who cooked?\nSarah: David.", "sentence_bad": "David: Who cooked?\nSarah: Pasta."}
+{"row": 5, "fragment": "fragment", "contrast": "loc vs. NP (tricky)", "sentence_good": "Where did you eat?\nIn the kitchen.", "sentence_bad": "Where did you eat?\nDinner."}
+{"row": 17, "fragment": "fragment", "contrast": "num vs. NP (tricky)", "sentence_good": "A: How many do you study?\nB: Ten.", "sentence_bad": "A: How many do you study?\nB: Science."}
+{"row": 11, "fragment": "sentence", "contrast": "expl vs. NP (tricky)", "sentence_good": "Why did you clean?\nI cleaned it was dirty.", "sentence_bad": "Why did you clean?\nI cleaned the patio."}
+{"row": 8, "fragment": "fragment", "contrast": "temp vs. NP (tricky)", "sentence_good": "When were you reading?\nSeveral months ago.", "sentence_bad": "When were you reading?\nA letter."}
+{"row": 7, "fragment": "sentence", "contrast": "loc vs. NP (tricky)", "sentence_good": "David: When did you clean?\nSarah: I cleaned yesterday.", "sentence_bad": "David: When did you clean?\nSarah: I cleaned the tiles."}
+{"row": 5, "fragment": "sentence", "contrast": "loc vs. NP (tricky)", "sentence_good": "Where did you eat?\nIn the cafeteria ate.", "sentence_bad": "Where did you eat?\nPasta ate."}
+{"row": 13, "fragment": "sentence", "contrast": "expl vs. NP (tricky)", "sentence_good": "Why did you cook?\nI was bored cooked.", "sentence_bad": "Why did you cook?\nA sandwich cooked."}
+{"row": 19, "fragment": "sentence", "contrast": "manner vs. NP (tricky)", "sentence_good": "How were you writing?\nBy candle light wrote.", "sentence_bad": "How were you writing?\nAn essay wrote."}
+{"row": 4, "fragment": "sentence", "contrast": "loc vs. NP (tricky)", "sentence_good": "David: Where were you writing?\nSarah: In the park wrote.", "sentence_bad": "David: Where were you writing?\nSarah: An essay wrote."}
+{"row": 16, "fragment": "sentence", "contrast": "num vs. NP (tricky)", "sentence_good": "David: How many did you eat?\nSarah: Three ate.", "sentence_bad": "David: How many did you eat?\nSarah: A sandwich ate."}
+{"row": 17, "fragment": "fragment", "contrast": "num vs. NP (tricky)", "sentence_good": "David: How many do you study?\nSarah: A few.", "sentence_bad": "David: How many do you study?\nSarah: Math."}
+{"row": 14, "fragment": "fragment", "contrast": "expl vs. NP (tricky)", "sentence_good": "Why do you teach?\nJust because.", "sentence_bad": "Why do you teach?\nScience."}
+{"row": 4, "fragment": "fragment", "contrast": "loc vs. NP (tricky)", "sentence_good": "A: Where were you reading?\nB: By the lake.", "sentence_bad": "A: Where were you reading?\nB: An essay."}
+{"row": 20, "fragment": "fragment", "contrast": "manner vs. NP (tricky)", "sentence_good": "How did you cook?\nWith tongs.", "sentence_bad": "How did you cook?\nPasta."}
+{"row": 12, "fragment": "sentence", "contrast": "expl vs. NP (tricky)", "sentence_good": "A: Why were you reading?\nB: For work read.", "sentence_bad": "A: Why were you reading?\nB: A book read."}
+{"row": 3, "fragment": "fragment", "contrast": "inanimate vs. animate (tricky)", "sentence_good": "A: Who studies?\nB: David.", "sentence_bad": "A: Who studies?\nB: Science."}
+{"row": 13, "fragment": "sentence", "contrast": "expl vs. NP (tricky)", "sentence_good": "A: Why did you eat?\nB: Just because ate.", "sentence_bad": "A: Why did you eat?\nB: Pasta ate."}
+{"row": 16, "fragment": "fragment", "contrast": "num vs. NP (tricky)", "sentence_good": "How many did you eat?\nOne.", "sentence_bad": "How many did you eat?\nLunch."}
+{"row": 17, "fragment": "sentence", "contrast": "num vs. NP (tricky)", "sentence_good": "David: How many do you teach?\nSarah: Ten teaches.", "sentence_bad": "David: How many do you teach?\nSarah: Science teaches."}
+{"row": 21, "fragment": "fragment", "contrast": "manner vs. NP (tricky)", "sentence_good": "How do you teach?\nFollowing an online course.", "sentence_bad": "How do you teach?\nHistory."}
+{"row": 14, "fragment": "sentence", "contrast": "expl vs. NP (tricky)", "sentence_good": "A: Why do you study?\nB: It's a job studies.", "sentence_bad": "A: Why do you study?\nB: Science studies."}
+{"row": 8, "fragment": "sentence", "contrast": "temp vs. NP (tricky)", "sentence_good": "David: When were you writing?\nSarah: An hour ago wrote.", "sentence_bad": "David: When were you writing?\nSarah: An essay wrote."}
+{"row": 22, "fragment": "sentence", "contrast": "manner vs. NP (tricky)", "sentence_good": "A: How did you clean?\nB: I cleaned slowly.", "sentence_bad": "A: How did you clean?\nB: I cleaned the floor."}
+{"row": 5, "fragment": "fragment", "contrast": "loc vs. NP (tricky)", "sentence_good": "Where did you eat?\nIn the cafeteria.", "sentence_bad": "Where did you eat?\nLunch."}
+{"row": 9, "fragment": "sentence", "contrast": "temp vs. NP (tricky)", "sentence_good": "A: When did you eat?\nB: Several minutes ago ate.", "sentence_bad": "A: When did you eat?\nB: Dinner ate."}
+{"row": 0, "fragment": "fragment", "contrast": "animate vs. inanimate (tricky)", "sentence_good": "A: Who cleaned?\nB: Sarah.", "sentence_bad": "A: Who cleaned?\nB: The patio."}
+{"row": 17, "fragment": "fragment", "contrast": "num vs. NP (tricky)", "sentence_good": "A: How many do you teach?\nB: A few.", "sentence_bad": "A: How many do you teach?\nB: History."}
+{"row": 4, "fragment": "sentence", "contrast": "loc vs. NP (tricky)", "sentence_good": "A: Where were you writing?\nB: In the office wrote.", "sentence_bad": "A: Where were you writing?\nB: A letter wrote."}
+{"row": 20, "fragment": "fragment", "contrast": "manner vs. NP (tricky)", "sentence_good": "David: How did you eat?\nSarah: Quickly.", "sentence_bad": "David: How did you eat?\nSarah: Lunch."}
+{"row": 1, "fragment": "sentence", "contrast": "animate vs. inanimate (tricky)", "sentence_good": "David: Who wrote?\nSarah: David wrote.", "sentence_bad": "David: Who wrote?\nSarah: A letter wrote."}
+{"row": 8, "fragment": "sentence", "contrast": "temp vs. NP (tricky)", "sentence_good": "When were you writing?\nSeveral months ago wrote.", "sentence_bad": "When were you writing?\nA letter wrote."}
+{"row": 4, "fragment": "fragment", "contrast": "loc vs. NP (tricky)", "sentence_good": "David: Where were you writing?\nSarah: At work.", "sentence_bad": "David: Where were you writing?\nSarah: A book."}
+{"row": 8, "fragment": "fragment", "contrast": "temp vs. NP (tricky)", "sentence_good": "David: When were you reading?\nSarah: Last week.", "sentence_bad": "David: When were you reading?\nSarah: An essay."}

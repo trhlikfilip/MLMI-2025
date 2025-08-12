@@ -1,0 +1,91 @@
+Looking in indexes: https://pypi.org/simple, https://download.pytorch.org/whl/cu118
+Requirement already satisfied: torch in /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages (2.5.1)
+Collecting torch
+  Using cached https://download.pytorch.org/whl/cu118/torch-2.7.1%2Bcu118-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (28 kB)
+Requirement already satisfied: torchvision in /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages (0.20.1)
+Collecting torchvision
+  Using cached https://download.pytorch.org/whl/cu118/torchvision-0.22.1%2Bcu118-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+Requirement already satisfied: torchaudio in /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages (2.5.1)
+Collecting torchaudio
+  Using cached https://download.pytorch.org/whl/cu118/torchaudio-2.7.1%2Bcu118-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Requirement already satisfied: filelock in /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages (from torch) (3.18.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages (from torch) (4.14.0)
+Collecting sympy>=1.13.3 (from torch)
+  Using cached sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: networkx in /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages (from torch) (3.3)
+Requirement already satisfied: jinja2 in /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages (from torch) (3.1.4)
+Requirement already satisfied: fsspec in /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages (from torch) (2025.5.1)
+Collecting nvidia-cuda-nvrtc-cu11==11.8.89 (from torch)
+  Using cached nvidia_cuda_nvrtc_cu11-11.8.89-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-runtime-cu11==11.8.89 (from torch)
+  Using cached nvidia_cuda_runtime_cu11-11.8.89-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-cupti-cu11==11.8.87 (from torch)
+  Using cached nvidia_cuda_cupti_cu11-11.8.87-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cudnn-cu11==9.1.0.70 (from torch)
+  Using cached https://download.pytorch.org/whl/cu118/nvidia_cudnn_cu11-9.1.0.70-py3-none-manylinux2014_x86_64.whl (663.9 MB)
+Collecting nvidia-cublas-cu11==11.11.3.6 (from torch)
+  Using cached nvidia_cublas_cu11-11.11.3.6-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cufft-cu11==10.9.0.58 (from torch)
+  Using cached nvidia_cufft_cu11-10.9.0.58-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-curand-cu11==10.3.0.86 (from torch)
+  Using cached nvidia_curand_cu11-10.3.0.86-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cusolver-cu11==11.4.1.48 (from torch)
+  Using cached nvidia_cusolver_cu11-11.4.1.48-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cusparse-cu11==11.7.5.86 (from torch)
+  Using cached nvidia_cusparse_cu11-11.7.5.86-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-nccl-cu11==2.21.5 (from torch)
+  Using cached https://download.pytorch.org/whl/cu118/nvidia_nccl_cu11-2.21.5-py3-none-manylinux2014_x86_64.whl (147.8 MB)
+Collecting nvidia-nvtx-cu11==11.8.86 (from torch)
+  Using cached nvidia_nvtx_cu11-11.8.86-py3-none-manylinux2014_x86_64.whl.metadata (1.7 kB)
+Collecting triton==3.3.1 (from torch)
+  Using cached https://download.pytorch.org/whl/triton-3.3.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.5 kB)
+Requirement already satisfied: setuptools>=40.8.0 in /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages (from triton==3.3.1->torch) (75.1.0)
+Requirement already satisfied: numpy in /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages (from torchvision) (2.2.6)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages (from torchvision) (10.4.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages (from sympy>=1.13.3->torch) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages (from jinja2->torch) (2.1.5)
+Using cached https://download.pytorch.org/whl/cu118/torch-2.7.1%2Bcu118-cp310-cp310-manylinux_2_28_x86_64.whl (905.3 MB)
+Using cached nvidia_cublas_cu11-11.11.3.6-py3-none-manylinux2014_x86_64.whl (417.9 MB)
+Using cached nvidia_cuda_cupti_cu11-11.8.87-py3-none-manylinux2014_x86_64.whl (13.1 MB)
+Using cached nvidia_cuda_nvrtc_cu11-11.8.89-py3-none-manylinux2014_x86_64.whl (23.2 MB)
+Using cached nvidia_cuda_runtime_cu11-11.8.89-py3-none-manylinux2014_x86_64.whl (875 kB)
+Using cached nvidia_cufft_cu11-10.9.0.58-py3-none-manylinux2014_x86_64.whl (168.4 MB)
+Using cached nvidia_curand_cu11-10.3.0.86-py3-none-manylinux2014_x86_64.whl (58.1 MB)
+Using cached nvidia_cusolver_cu11-11.4.1.48-py3-none-manylinux2014_x86_64.whl (128.2 MB)
+Downloading nvidia_cusparse_cu11-11.7.5.86-py3-none-manylinux2014_x86_64.whl (204.1 MB)
+[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/204.1 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m28.3/204.1 MB[0m [31m174.6 MB/s[0m eta [36m0:00:02[0m[2K   [91m━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m52.7/204.1 MB[0m [31m136.9 MB/s[0m eta [36m0:00:02[0m[2K   [91m━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━━━━━[0m [32m93.3/204.1 MB[0m [31m159.5 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━[0m [32m140.5/204.1 MB[0m [31m178.8 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━[0m [32m188.7/204.1 MB[0m [31m191.0 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m203.9/204.1 MB[0m [31m194.2 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m203.9/204.1 MB[0m [31m194.2 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m203.9/204.1 MB[0m [31m194.2 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m203.9/204.1 MB[0m [31m194.2 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m203.9/204.1 MB[0m [31m194.2 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m203.9/204.1 MB[0m [31m194.2 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m203.9/204.1 MB[0m [31m194.2 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m204.1/204.1 MB[0m [31m82.0 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading nvidia_nvtx_cu11-11.8.86-py3-none-manylinux2014_x86_64.whl (99 kB)
+Downloading https://download.pytorch.org/whl/triton-3.3.1-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (155.6 MB)
+[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/155.6 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m56.1/155.6 MB[0m [31m283.4 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━[0m [32m114.3/155.6 MB[0m [31m286.0 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m155.5/155.6 MB[0m [31m286.1 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m155.5/155.6 MB[0m [31m286.1 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m155.5/155.6 MB[0m [31m286.1 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m155.5/155.6 MB[0m [31m286.1 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m155.5/155.6 MB[0m [31m286.1 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m [32m155.5/155.6 MB[0m [31m286.1 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m155.6/155.6 MB[0m [31m96.4 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading https://download.pytorch.org/whl/cu118/torchvision-0.22.1%2Bcu118-cp310-cp310-manylinux_2_28_x86_64.whl (6.7 MB)
+[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/6.7 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m6.7/6.7 MB[0m [31m121.8 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading https://download.pytorch.org/whl/cu118/torchaudio-2.7.1%2Bcu118-cp310-cp310-manylinux_2_28_x86_64.whl (3.3 MB)
+[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/3.3 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.3/3.3 MB[0m [31m63.3 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/6.3 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m6.3/6.3 MB[0m [31m107.1 MB/s[0m eta [36m0:00:00[0m
+[?25hInstalling collected packages: triton, sympy, nvidia-nvtx-cu11, nvidia-nccl-cu11, nvidia-cusparse-cu11, nvidia-curand-cu11, nvidia-cufft-cu11, nvidia-cuda-runtime-cu11, nvidia-cuda-nvrtc-cu11, nvidia-cuda-cupti-cu11, nvidia-cublas-cu11, nvidia-cusolver-cu11, nvidia-cudnn-cu11, torch, torchvision, torchaudio
+  Attempting uninstall: sympy
+    Found existing installation: sympy 1.13.1
+    Uninstalling sympy-1.13.1:
+      Successfully uninstalled sympy-1.13.1
+  Attempting uninstall: torch
+    Found existing installation: torch 2.5.1
+    Uninstalling torch-2.5.1:
+      Successfully uninstalled torch-2.5.1
+  Rolling back uninstall of torch
+  Moving to /anaconda/envs/azureml_py310_sdkv2/bin/convert-caffe2-to-onnx
+   from /tmp/pip-uninstall-j4kfsyqr/convert-caffe2-to-onnx
+  Moving to /anaconda/envs/azureml_py310_sdkv2/bin/convert-onnx-to-caffe2
+   from /tmp/pip-uninstall-j4kfsyqr/convert-onnx-to-caffe2
+  Moving to /anaconda/envs/azureml_py310_sdkv2/bin/torchfrtrace
+   from /tmp/pip-uninstall-j4kfsyqr/torchfrtrace
+  Moving to /anaconda/envs/azureml_py310_sdkv2/bin/torchrun
+   from /tmp/pip-uninstall-j4kfsyqr/torchrun
+  Moving to /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/functorch/
+   from /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/~unctorch
+  Moving to /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/torch-2.5.1.dist-info/
+   from /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/~orch-2.5.1.dist-info
+  Moving to /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/torch/
+   from /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/~orch
+  Moving to /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/torchgen/
+   from /anaconda/envs/azureml_py310_sdkv2/lib/python3.10/site-packages/~orchgen

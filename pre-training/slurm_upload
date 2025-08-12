@@ -1,0 +1,52 @@
+#!/bin/bash
+#
+# Wilkes‑3 SLURM job – push every checkpoint in ltg‑bert‑pretrain to the Hub
+# Fixed: 27 Jun 2025
+#
+
+# ─────────────────── SBATCH DIRECTIVES ────────────────────────
+#SBATCH -J hf-upload                              # job name
+#SBATCH -A MLMI-ft360-SL2-CPU                    # your project code (CPU allocation)
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=2                        # 2 logical cores is plenty
+#SBATCH --mem=8G                                 # tweak as required
+#SBATCH --time=2:00:00                           # generous upper bound
+#SBATCH -p cclake                                # **CPU** partition; change if needed
+#SBATCH --output=logs/%x.%j.out                  # log file
+# ───────────────────────────────────────────────────────────────
+
+
+# MODULES
+. /etc/profile.d/modules.sh
+module purge
+module load rhel8/default-amp        # GCC 9.4 toolchain (no CUDA needed)
+
+# CONDA ENV
+source /rds/project/rds-xyBFuSj0hm0/MLMI2.M2024/miniconda3/bin/activate
+conda env remove -y -n hf-upload-env 2>/dev/null || true
+conda create -y -n hf-upload-env python=3.10 pip
+conda activate hf-upload-env
+export PYTHONNOUSERSITE=1            # ignore ~/.local wheels
+
+# core deps
+python - <<'PY'
+import subprocess, sys, importlib
+for pkg in ("huggingface_hub",):
+    try:
+        importlib.import_module(pkg)
+    except ImportError:
+        subprocess.check_call([sys.executable,"-m","pip","install","--upgrade",pkg])
+PY
+
+# RUN THE UPLOAD SCRIPT (NEED TO ENTER NEW HF TOKEN)
+echo -e "\nStarting upload at $(date)…\n"
+python upload.py \
+  --hf_username FilipT \
+  --hf_token hf_XXXXXX \
+  --ft_dir /home/ft360/mphil_thesis/ltg-bert-pretrain \
+  --repo_prefix ltgbert-fair \
+  --private false \
+  --base_repo babylm/ltgbert-100m-2024
+echo -e "\nFinished at $(date)"
+

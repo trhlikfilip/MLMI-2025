@@ -1,0 +1,42 @@
+{
+  "1": {
+    "intrasentence": {
+      "gender": {
+        "Count": 255,
+        "LM Score": 70.50355401442359,
+        "SS Score": 51.65956282043239,
+        "ICAT Score": 68.1634524754099
+      },
+      "profession": {
+        "Count": 810,
+        "LM Score": 73.87063668872564,
+        "SS Score": 55.09406225963915,
+        "ICAT Score": 66.34460423969459
+      },
+      "race": {
+        "Count": 962,
+        "LM Score": 74.25838140441255,
+        "SS Score": 52.10146998202097,
+        "ICAT Score": 71.13734621571581
+      },
+      "religion": {
+        "Count": 79,
+        "LM Score": 72.06896551724138,
+        "SS Score": 43.54022988505747,
+        "ICAT Score": 62.75798652397939
+      },
+      "overall": {
+        "Count": 2106,
+        "LM Score": 73.55269959388077,
+        "SS Score": 52.85684943039779,
+        "ICAT Score": 69.35011983510081
+      }
+    },
+    "overall": {
+      "Count": 2106,
+      "LM Score": 73.55269959388077,
+      "SS Score": 52.85684943039779,
+      "ICAT Score": 69.35011983510081
+    }
+  }
+}
