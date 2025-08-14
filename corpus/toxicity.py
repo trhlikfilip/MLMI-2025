@@ -6,11 +6,7 @@ from typing import Optional, Sequence
 import pandas as pd
 from detoxify import Detoxify
 from tqdm.auto import tqdm
-
-try:
-    import torch
-except ModuleNotFoundError:
-    torch = None
+import torch
 
 TXT_FILE: Path | str = "BabyLM_corpus.txt"
 CSV_FILE: Path | str | None = 'BabyLM_toxicity.csv'
