@@ -3,6 +3,7 @@ The specific codes for running intra-model methods for LTG and LTG-Baseline are 
 
 Follow the basic instrucitons set by the authors of the original work:
 
+---
 # An Empirical Survey of the Effectiveness of Debiasing Techniques for Pre-trained Language Models
 > Nicholas Meade, Elinor Poole-Dayan, Siva Reddy
 
