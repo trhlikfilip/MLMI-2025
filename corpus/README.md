@@ -9,4 +9,4 @@
 
 ## Adjustment
 - _fair.ipynb_: Code for perturbing the corpus in order to debias it
-- - _detox.py_: Code for detoxifying sentences in the corpus using LLM
+- _detox.py_: Code for detoxifying sentences in the corpus using LLM
