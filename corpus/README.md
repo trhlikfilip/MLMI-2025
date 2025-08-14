@@ -1,4 +1,4 @@
-# Scripts for extracting analysing and adjusting the corpora
+# Scripts for analysing and adjusting the corpora
 
 ## Metrics
 - _corpus_metrics.py_: Extracts all metrics from the TextDescriptives library
