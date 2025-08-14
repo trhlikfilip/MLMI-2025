@@ -1,3 +1,8 @@
+# Bias-Bench
+The specific codes for running intra-model methods for LTG and LTG-Baseline are in _experiments_ folder. They are labeled run_mlm_ltg.py (ltg-bert) and run_mlm_babylm_ltg.py (ltg-baseline). Code is further adjusted to allow for running of the post-model experiments.
+
+Follow the basic instrucitons set by the authors of the original work:
+
 # An Empirical Survey of the Effectiveness of Debiasing Techniques for Pre-trained Language Models
 > Nicholas Meade, Elinor Poole-Dayan, Siva Reddy
 
