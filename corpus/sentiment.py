@@ -4,12 +4,8 @@ from pathlib import Path
 from typing import Sequence
 import pandas as pd
 from tqdm.auto import tqdm
-
-try:
-    import torch
-    from transformers import AutoTokenizer, AutoModelForSequenceClassification
-except ModuleNotFoundError as exc:
-    raise SystemExit("Install with: pip install torch transformers tqdm pandas") from exc
+import torch
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 TXT_FILE: Path | str = "babyLM_corpus.txt"
 CSV_FILE: Path | str | None = "BabyLM_sentiment.csv"
