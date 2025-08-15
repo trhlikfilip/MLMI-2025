@@ -8,5 +8,5 @@
 - _lexical_emotions.py_: Extracts the avarage presence of the 6 core emotions form the corpus
 
 ## Adjustment
-- _fair.ipynb_: Code for perturbing the corpus in order to debias it
+- _fair.py: Code for perturbing the corpus in order to debias it
 - _detox.py_: Code for detoxifying sentences in the corpus using LLM
